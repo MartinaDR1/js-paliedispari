@@ -8,7 +8,7 @@ console.log(userWord);
 
 // Creo una funzione 
 function wordPal (enterWord){
-    let word = enterWord.split('').reverse('').join('');
+    let word = enterWord.split('').reverse().join('');
     if (enterWord == word){
         return true
     } else {
@@ -53,7 +53,7 @@ const result = sum(numberUser,randNumber)
 console.log(`La somma dei due numeri è: ${result}`);
 
 // Verifico se la somma restituisce un numero pari o dispari e stampo chi vince
-function isEven (numb){
+function winner (numb, choice){
     if ( choice == 'pari' && numb % 2 == 0 || choice =='dispari' && numb % 2 != 0){
         return true
     } else {
@@ -61,7 +61,7 @@ function isEven (numb){
     }
 };
  
-if (isEven(result)){
+if (winner(result)){
     console.log(`Complimenti! Hai vinto`);
 } else {
     console.log('Mi dispiace! Ha vinto il pc');
